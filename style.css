@@ -1,5 +1,5 @@
 /* ============================================================
-   style.css — refined & responsive
+   style.css — refined & responsive (luxury typography)
    ============================================================ */
 
 /* ---------- RESET & BASE ---------- */
@@ -79,12 +79,12 @@ ul {
 
 /* ---------- SECTION LABELS & TITLES — refined luxury ---------- */
 .section-label {
-    font-size: 11px;
-    letter-spacing: 5px;
+    font-size: 10px;
+    letter-spacing: 4.5px;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     font-family: var(--font-body);
     position: relative;
     display: inline-block;
@@ -94,9 +94,9 @@ ul {
 .section-label::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
-    width: 32px;
+    width: 28px;
     height: 1.5px;
     background: var(--accent);
     opacity: 0.4;
@@ -110,10 +110,10 @@ ul {
 .section-title {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: clamp(34px, 4.5vw, 52px);
+    font-size: clamp(30px, 4vw, 46px);
     line-height: 1.12;
     color: var(--text-primary);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     letter-spacing: -0.3px;
 }
 
@@ -123,7 +123,7 @@ ul {
 }
 
 .section-sub {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-secondary);
     max-width: 560px;
     font-weight: 300;
@@ -138,9 +138,9 @@ ul {
 /* ---------- BUTTONS — refined ---------- */
 .btn-gold,
 .btn-outline {
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 1.5px;
-    padding: 17px 46px;
+    padding: 16px 42px;
 }
 
 .btn-gold {
@@ -218,7 +218,7 @@ ul {
 .logo {
     font-family: var(--font-heading);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1.5px;
     color: var(--text-primary);
     line-height: 1.2;
@@ -232,7 +232,7 @@ ul {
 
 .logo span {
     display: block;
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 4.5px;
     text-transform: uppercase;
     color: var(--accent);
@@ -244,11 +244,11 @@ ul {
 .nav-desktop {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 34px;
 }
 
 .nav-desktop a {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--text-secondary);
     letter-spacing: 1.2px;
@@ -280,10 +280,10 @@ ul {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     color: var(--text-secondary);
-    margin-left: 10px;
+    margin-left: 8px;
     letter-spacing: 0.5px;
 }
 
@@ -291,7 +291,7 @@ ul {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     cursor: pointer;
     padding: 2px 6px;
@@ -344,7 +344,7 @@ ul {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ---------- HERO — cinematic, refined typography ---------- */
+/* ---------- HERO — refined typography ---------- */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -420,28 +420,28 @@ ul {
 }
 
 .hero-content {
-    max-width: 680px;
+    max-width: 660px;
     padding: 20px 0;
 }
 
 .hero-label {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
-    font-size: 11px;
-    letter-spacing: 5px;
+    gap: 14px;
+    font-size: 10px;
+    letter-spacing: 4.5px;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
     font-family: var(--font-body);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     opacity: 0.9;
 }
 
 .hero-label::before {
     content: '';
     display: inline-block;
-    width: 40px;
+    width: 36px;
     height: 1.5px;
     background: var(--accent);
     opacity: 0.5;
@@ -450,10 +450,10 @@ ul {
 .hero h1 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: clamp(40px, 5.5vw, 68px);
+    font-size: clamp(36px, 4.8vw, 60px);
     line-height: 1.06;
     color: var(--text-primary);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     letter-spacing: -0.5px;
     text-shadow: 0 2px 48px rgba(0, 0, 0, 0.40);
 }
@@ -465,28 +465,28 @@ ul {
 }
 
 .hero p {
-    font-size: 17px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.85);
     max-width: 520px;
     line-height: 1.8;
     font-weight: 300;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     text-shadow: 0 1px 24px rgba(0, 0, 0, 0.30);
 }
 
 .hero-cta {
     display: flex;
-    gap: 18px;
+    gap: 16px;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .hero-cta-line {
     display: block;
-    width: 72px;
+    width: 64px;
     height: 1.5px;
     background: var(--accent);
-    margin-top: 30px;
+    margin-top: 28px;
     opacity: 0.3;
     border-radius: 2px;
 }
@@ -500,9 +500,9 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: rgba(255, 255, 255, 0.12);
-    font-size: 8px;
+    font-size: 7px;
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: 300;
@@ -511,7 +511,7 @@ ul {
 
 .scroll-indicator .line {
     width: 1px;
-    height: 32px;
+    height: 28px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), transparent);
 }
 
@@ -548,7 +548,7 @@ ul {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 72px;
+    gap: 68px;
     align-items: center;
 }
 
@@ -587,19 +587,19 @@ ul {
 }
 
 .about-text .section-title {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .about-text p {
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.9;
     font-weight: 300;
     max-width: 500px;
 }
 
 .about-text p+p {
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 /* ---------- SERVICES — refined ---------- */
@@ -622,18 +622,18 @@ ul {
 
 .services-header {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 52px;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 26px;
 }
 
 .service-card {
     background: var(--bg-card);
-    padding: 42px 38px 34px;
+    padding: 38px 34px 30px;
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
     transition: border-color 0.5s ease, background 0.5s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -684,9 +684,9 @@ ul {
 }
 
 .service-card .icon {
-    font-size: 32px;
+    font-size: 30px;
     color: var(--accent);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     display: inline-block;
     opacity: 0.85;
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -700,14 +700,14 @@ ul {
 .service-card h3 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-primary);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: -0.2px;
 }
 
 .service-card p {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
     font-weight: 300;
@@ -733,13 +733,13 @@ ul {
 
 .portfolio-header {
     text-align: center;
-    margin-bottom: 52px;
+    margin-bottom: 48px;
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 16px;
 }
 
 .portfolio-item {
@@ -776,17 +776,17 @@ ul {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 28px 24px 30px;
+    padding: 24px 20px 26px;
     background: linear-gradient(0deg, rgba(34, 34, 34, 0.92) 0%, rgba(34, 34, 34, 0.20) 60%, transparent 100%);
     transition: padding 0.4s ease;
 }
 
 .portfolio-item:hover .overlay {
-    padding-bottom: 34px;
+    padding-bottom: 30px;
 }
 
 .portfolio-item .overlay span {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--accent);
@@ -798,9 +798,9 @@ ul {
 .portfolio-item .overlay h4 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     color: var(--text-primary);
-    margin-top: 4px;
+    margin-top: 3px;
     letter-spacing: -0.2px;
 }
 
@@ -825,25 +825,25 @@ ul {
 }
 
 .clients .section-title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .clients .section-sub {
-    margin: 0 auto 48px;
+    margin: 0 auto 44px;
 }
 
 .clients-marquee {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 28px 0;
+    padding: 24px 0;
     mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .clients-track {
     display: flex;
-    gap: 52px;
+    gap: 48px;
     align-items: center;
     width: max-content;
     animation: marqueeScroll 34s linear infinite;
@@ -862,7 +862,7 @@ ul {
     transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
         background 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
-    padding: 22px;
+    padding: 20px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
 }
 
@@ -923,13 +923,13 @@ ul {
 }
 
 .contact .section-sub {
-    margin: 0 auto 44px;
+    margin: 0 auto 40px;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 22px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -937,10 +937,10 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: var(--text-secondary);
-    padding: 18px 36px;
+    padding: 16px 32px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--radius);
     transition: border-color 0.4s ease, color 0.4s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
@@ -951,7 +951,7 @@ ul {
 }
 
 .contact-link i {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--accent);
     transition: transform 0.4s ease, color 0.4s ease;
 }
@@ -971,7 +971,7 @@ ul {
 
 /* ---------- FOOTER ---------- */
 .site-footer {
-    padding: 36px 0;
+    padding: 32px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
     text-align: center;
     position: relative;
@@ -988,7 +988,7 @@ ul {
 }
 
 .site-footer p {
-    font-size: 10px;
+    font-size: 9px;
     color: rgba(255, 255, 255, 0.12);
     letter-spacing: 2.5px;
     font-weight: 300;
@@ -1049,7 +1049,7 @@ ul {
         padding: 0 40px;
     }
     .hero h1 {
-        font-size: clamp(38px, 5.5vw, 60px);
+        font-size: clamp(34px, 5vw, 54px);
     }
 }
 
@@ -1071,53 +1071,53 @@ ul {
     }
 
     .nav-desktop {
-        gap: 30px;
+        gap: 28px;
     }
     .nav-desktop a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .hero h1 {
-        font-size: clamp(34px, 5vw, 50px);
+        font-size: clamp(32px, 4.8vw, 46px);
     }
     .hero p {
-        font-size: 16px;
-    }
-
-    .about-grid {
-        gap: 48px;
-    }
-    .about-text p {
         font-size: 15px;
     }
 
-    .services-grid {
-        gap: 22px;
+    .about-grid {
+        gap: 44px;
     }
-    .service-card {
-        padding: 36px 32px 30px;
-    }
-    .service-card h3 {
-        font-size: 19px;
-    }
-    .service-card p {
+    .about-text p {
         font-size: 14px;
     }
 
+    .services-grid {
+        gap: 20px;
+    }
+    .service-card {
+        padding: 32px 28px 26px;
+    }
+    .service-card h3 {
+        font-size: 17px;
+    }
+    .service-card p {
+        font-size: 13px;
+    }
+
     .portfolio-grid {
-        gap: 14px;
+        gap: 12px;
     }
     .portfolio-item .overlay h4 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .clients-track .logo-item {
         width: 135px;
         height: 135px;
-        padding: 18px;
+        padding: 16px;
     }
     .clients-track {
-        gap: 38px;
+        gap: 36px;
     }
 }
 
@@ -1144,7 +1144,7 @@ ul {
     }
 
     .nav-desktop a {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 1.5px;
         padding: 6px 0;
     }
@@ -1152,10 +1152,10 @@ ul {
     .lang-toggle {
         margin-left: 0;
         margin-top: 8px;
-        font-size: 13px;
+        font-size: 12px;
     }
     .lang-toggle button {
-        font-size: 13px;
+        font-size: 12px;
         padding: 2px 8px;
     }
 
@@ -1198,82 +1198,82 @@ ul {
     }
 
     .hero h1 {
-        font-size: clamp(32px, 7vw, 46px);
+        font-size: clamp(30px, 6.5vw, 42px);
     }
     .hero p {
-        font-size: 16px;
+        font-size: 15px;
         max-width: 100%;
     }
     .hero-cta-line {
-        width: 52px;
-        margin-top: 24px;
+        width: 48px;
+        margin-top: 22px;
     }
 
     .section-title {
-        font-size: clamp(30px, 5vw, 42px);
+        font-size: clamp(28px, 4.8vw, 38px);
     }
     .section-sub {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 38px;
+        gap: 36px;
     }
     .about-text .section-sub {
         max-width: 100%;
     }
     .about-text p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
     }
     .service-card {
-        padding: 30px 26px 26px;
+        padding: 28px 24px 24px;
     }
     .service-card h3 {
-        font-size: 19px;
+        font-size: 17px;
     }
     .service-card p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        gap: 10px;
     }
     .portfolio-item .overlay {
-        padding: 20px 16px 22px;
+        padding: 18px 14px 20px;
     }
     .portfolio-item .overlay h4 {
-        font-size: 15px;
+        font-size: 14px;
     }
     .portfolio-item .overlay span {
-        font-size: 8px;
+        font-size: 7px;
         letter-spacing: 2.5px;
     }
 
     .clients-track .logo-item {
         width: 110px;
         height: 110px;
-        padding: 14px;
+        padding: 12px;
     }
     .clients-track {
-        gap: 30px;
+        gap: 28px;
     }
     .clients .section-sub {
-        margin-bottom: 36px;
+        margin-bottom: 34px;
     }
 
     .contact-links {
-        gap: 16px;
+        gap: 14px;
     }
     .contact-link {
-        padding: 15px 26px;
-        font-size: 13px;
+        padding: 14px 24px;
+        font-size: 12px;
     }
 
     .scroll-indicator {
@@ -1281,24 +1281,24 @@ ul {
     }
 
     :root {
-        --section-padding: 68px 0;
+        --section-padding: 64px 0;
     }
 }
 
 /* ---------- Mobile phones (≤480px) ---------- */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: clamp(28px, 7.5vw, 38px);
+        font-size: clamp(26px, 7vw, 34px);
     }
     .hero p {
-        font-size: 15px;
+        font-size: 14px;
     }
     .hero-label {
-        font-size: 10px;
-        letter-spacing: 4px;
+        font-size: 9px;
+        letter-spacing: 3.5px;
     }
     .hero-label::before {
-        width: 30px;
+        width: 26px;
     }
 
     .hero-cta {
@@ -1310,82 +1310,82 @@ ul {
     .hero-cta .btn-outline {
         width: 100%;
         text-align: center;
-        padding: 16px 28px;
-        font-size: 12px;
+        padding: 14px 24px;
+        font-size: 11px;
     }
 
     .hero-cta-line {
-        width: 44px;
-        margin-top: 20px;
+        width: 40px;
+        margin-top: 18px;
     }
 
     .section-label {
-        font-size: 10px;
-        letter-spacing: 4px;
+        font-size: 9px;
+        letter-spacing: 3.5px;
     }
     .section-title {
-        font-size: clamp(28px, 6vw, 34px);
+        font-size: clamp(26px, 5.5vw, 32px);
     }
     .section-sub {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .services-grid {
-        gap: 16px;
+        gap: 14px;
     }
     .service-card {
-        padding: 24px 20px 22px;
+        padding: 22px 18px 20px;
     }
     .service-card .icon {
-        font-size: 28px;
+        font-size: 26px;
     }
     .service-card h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
     .service-card p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .portfolio-grid {
-        gap: 8px;
+        gap: 6px;
     }
     .portfolio-item .overlay {
-        padding: 14px 12px 16px;
+        padding: 12px 10px 14px;
     }
     .portfolio-item .overlay h4 {
-        font-size: 13px;
+        font-size: 12px;
     }
     .portfolio-item .overlay span {
-        font-size: 7px;
+        font-size: 6px;
         letter-spacing: 2px;
     }
 
     .clients-track .logo-item {
         width: 72px;
         height: 72px;
-        padding: 10px;
+        padding: 8px;
     }
     .clients-track {
-        gap: 22px;
+        gap: 20px;
     }
     .clients-marquee {
-        padding: 16px 0;
+        padding: 14px 0;
     }
 
     .contact-link {
         width: 100%;
         justify-content: center;
-        padding: 14px 20px;
-        font-size: 13px;
+        padding: 12px 18px;
+        font-size: 12px;
     }
     .contact-link i {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .btn-gold,
     .btn-outline {
-        font-size: 12px;
-        padding: 15px 28px;
+        font-size: 11px;
+        padding: 14px 24px;
     }
 
     .about-image img {
@@ -1393,7 +1393,7 @@ ul {
     }
 
     .site-footer p {
-        font-size: 9px;
+        font-size: 8px;
         letter-spacing: 2px;
     }
 }
@@ -1401,21 +1401,21 @@ ul {
 /* ---------- Very small phones (≤380px) ---------- */
 @media (max-width: 380px) {
     .hero h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
     .clients-track .logo-item {
         width: 60px;
         height: 60px;
-        padding: 8px;
+        padding: 6px;
     }
     .clients-track {
-        gap: 16px;
+        gap: 14px;
     }
     .portfolio-grid {
-        gap: 6px;
+        gap: 4px;
     }
     .hero p {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -1426,15 +1426,15 @@ ul {
         background-position: 50% 30%;
     }
     .hero h1 {
-        font-size: clamp(56px, 6vw, 78px);
+        font-size: clamp(52px, 5.5vw, 70px);
     }
     .hero p {
-        font-size: 19px;
+        font-size: 18px;
     }
     .section-title {
-        font-size: clamp(44px, 4.8vw, 60px);
+        font-size: clamp(40px, 4.5vw, 54px);
     }
     .section-sub {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
