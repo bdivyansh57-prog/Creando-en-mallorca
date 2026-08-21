@@ -51,7 +51,6 @@
             'contact-sub': 'We\'d love to hear about your project. Reach out to us anytime.',
             'contact-whatsapp': 'WhatsApp',
             'contact-instagram': 'Instagram',
-            'contact-email': 'Email',
         },
         es: {
             'nav-about': 'NOSOTROS',
@@ -97,7 +96,6 @@
             'contact-sub': 'Nos encantaría conocer tu proyecto. Escríbenos cuando quieras.',
             'contact-whatsapp': 'WhatsApp',
             'contact-instagram': 'Instagram',
-            'contact-email': 'Correo',
         }
     };
 
@@ -139,17 +137,19 @@
     const menuToggle = document.getElementById('menuToggle');
     const navDesktop = document.getElementById('navDesktop');
 
-    menuToggle.addEventListener('click', function() {
-        this.classList.toggle('open');
-        navDesktop.classList.toggle('open');
-    });
-
-    navDesktop.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('open');
-            navDesktop.classList.remove('open');
+    if (menuToggle && navDesktop) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('open');
+            navDesktop.classList.toggle('open');
         });
-    });
+
+        navDesktop.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navDesktop.classList.remove('open');
+            });
+        });
+    }
 
     // ---- FADE-UP OBSERVER ----
     const fadeEls = document.querySelectorAll('.fade-up');
@@ -178,34 +178,54 @@
         }
     });
 
-    // ---- CLIENTS MARQUEE — inject logos ----
-const clientLogos = [
-    { name: 'Logo 1', src: 'img/logos/2.png' },
-    { name: 'Logo 2', src: 'img/logos/3.png' },
-    { name: 'Logo 3', src: 'img/logos/4.png' },
-    { name: 'Logo 4', src: 'img/logos/5.png' },
-    { name: 'Logo 5', src: 'img/logos/6.png' },
-    { name: 'Logo 6', src: 'img/logos/7.png' },
-    { name: 'Logo 7', src: 'img/logos/8.png' },
-    { name: 'Logo 8', src: 'img/logos/9.png' },
-];
+    // ---- CLIENTS MARQUEE — inject logos (with fallback SVGs if images missing) ----
+    const clientLogos = [
+        { name: 'Logo 1', src: 'img/logos/2.png' },
+        { name: 'Logo 2', src: 'img/logos/3.png' },
+        { name: 'Logo 3', src: 'img/logos/4.png' },
+        { name: 'Logo 4', src: 'img/logos/5.png' },
+        { name: 'Logo 5', src: 'img/logos/6.png' },
+        { name: 'Logo 6', src: 'img/logos/7.png' },
+        { name: 'Logo 7', src: 'img/logos/8.png' },
+        { name: 'Logo 8', src: 'img/logos/9.png' },
+        { name: 'Logo 8', src: 'img/logos/10.png' },
+        { name: 'Logo 8', src: 'img/logos/11.png' },
+        { name: 'Logo 8', src: 'img/logos/12.png' },
+        { name: 'Logo 8', src: 'img/logos/13.png' },
+        { name: 'Logo 8', src: 'img/logos/14.png' },
+        { name: 'Logo 8', src: 'img/logos/15.png' },
+        { name: 'Logo 8', src: 'img/logos/16.png' },
+        { name: 'Logo 8', src: 'img/logos/17.png' },
+    ];
 
-const track = document.getElementById('clientsTrack');
+    const track = document.getElementById('clientsTrack');
+    if (track) {
+        // Build array with duplicates for seamless marquee
+        const all = [...clientLogos, ...clientLogos];
+        all.forEach((client) => {
+            const div = document.createElement('div');
+            div.className = 'logo-item';
+            const img = document.createElement('img');
+            img.src = client.src;
+            img.alt = client.name;
+            img.loading = 'lazy';
+            // If image fails, replace with a placeholder SVG (Argentina themed)
+            img.onerror = function() {
+                this.outerHTML = `
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+                        <rect width="120" height="80" fill="#f8fafc" rx="4"/>
+                        <rect x="10" y="20" width="100" height="6" fill="#74ACDF" rx="2" opacity="0.3"/>
+                        <rect x="10" y="34" width="80" height="6" fill="#1A2A3A" rx="2" opacity="0.12"/>
+                        <rect x="10" y="48" width="60" height="6" fill="#1A2A3A" rx="2" opacity="0.08"/>
+                        <circle cx="95" cy="40" r="14" fill="none" stroke="#74ACDF" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="95" cy="40" r="6" fill="#D4A843" opacity="0.15"/>
+                    </svg>
+                `;
+            };
+            div.appendChild(img);
+            track.appendChild(div);
+        });
+    }
 
-function buildLogos() {
-    const all = [...clientLogos, ...clientLogos];
-    all.forEach((client) => {
-        const div = document.createElement('div');
-        div.className = 'logo-item';
-        const img = document.createElement('img');
-        img.src = client.src;
-        img.alt = client.name;
-        img.loading = 'lazy';
-        div.appendChild(img);
-        track.appendChild(div);
-    });
-}
-
-    buildLogos();
-
+    console.log('🇦🇷 Argentina Edition — Celeste & White');
 })();
