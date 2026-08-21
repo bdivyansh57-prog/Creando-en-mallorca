@@ -1,6 +1,25 @@
 /* ============================================================
    style.css — Argentina "Celeste & White" Edition
+   Headline font: Tusker Grotesk Bold
    ============================================================ */
+
+/* ---------- CUSTOM FONT (Tusker Grotesk Bold) ---------- */
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('fonts/TuskerGrotesk-Bold.woff2') format('woff2'),
+         url('fonts/TuskerGrotesk-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('fonts/TuskerGrotesk-BoldItalic.woff2') format('woff2'),
+         url('fonts/TuskerGrotesk-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
 
 /* ---------- RESET & BASE ---------- */
 *,
@@ -40,8 +59,10 @@
     --accent-glow: var(--celeste-glow);
     --accent-dim: var(--celeste-dim);
 
-    --font-heading: 'Playfair Display', serif;
+    /* UPDATED: Headline font is now Tusker Grotesk (bold) */
+    --font-heading: 'Tusker Grotesk', 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
+
     --nav-height: 76px;
     --section-padding: 110px 0;
     --radius: 4px;
@@ -100,7 +121,7 @@ a {
     color: var(--accent-dark);
     font-weight: 500;
     margin-bottom: 12px;
-    font-family: var(--font-body);
+    font-family: var(--font-body); /* body font for labels */
     position: relative;
     display: inline-block;
     opacity: 0.85;
@@ -120,17 +141,26 @@ a {
     transform: translateX(-50%);
 }
 
-.section-title {
+/* All main headings – now Tusker Grotesk Bold (700) */
+.section-title,
+.hero h1,
+.service-card h3,
+.portfolio-item .overlay h4,
+.logo {
     font-family: var(--font-heading);
-    font-weight: 400;
+    font-weight: 700; /* Bold as requested */
+    letter-spacing: -0.3px;
+}
+
+.section-title {
     font-size: clamp(30px, 4vw, 46px);
     line-height: 1.12;
     color: var(--text-primary);
     margin-bottom: 16px;
-    letter-spacing: -0.3px;
 }
 .section-title em {
     font-style: italic;
+    font-weight: 700; /* keep bold + italic */
     color: var(--accent-dark);
 }
 
@@ -221,8 +251,7 @@ a {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-weight: 300;
+    font-weight: 700; /* Bold */
     font-size: 18px;
     letter-spacing: 1.5px;
     color: var(--text-primary);
@@ -235,7 +264,7 @@ a {
     letter-spacing: 4.5px;
     text-transform: uppercase;
     color: var(--celeste-dark);
-    font-family: var(--font-body);
+    font-family: var(--font-body); /* body font for subtitle */
     font-weight: 400;
     margin-top: 2px;
 }
@@ -355,7 +384,6 @@ a {
     width: 100%;
     height: 100%;
     background:
-        /* Much lighter overlay so the image is more visible */
         linear-gradient(135deg,
             rgba(116, 172, 223, 0.15) 0%,
             rgba(255, 255, 255, 0.60) 35%,
@@ -367,7 +395,6 @@ a {
     background-blend-mode: normal;
     will-change: transform;
 }
-/* subtle glow */
 .hero-bg::before {
     content: '';
     position: absolute;
@@ -410,17 +437,15 @@ a {
 }
 
 .hero h1 {
-    font-family: var(--font-heading);
-    font-weight: 400;
     font-size: clamp(36px, 4.8vw, 60px);
     line-height: 1.06;
     color: var(--text-primary);
     margin-bottom: 18px;
-    letter-spacing: -0.5px;
     text-shadow: 0 2px 48px rgba(255,255,255,0.4);
 }
 .hero h1 em {
     font-style: italic;
+    font-weight: 700; /* bold italic */
     color: var(--celeste-dark);
     text-shadow: 0 2px 40px rgba(116, 172, 223, 0.12);
 }
@@ -585,8 +610,6 @@ a {
     opacity: 1;
 }
 .service-card h3 {
-    font-family: var(--font-heading);
-    font-weight: 400;
     font-size: 18px;
     color: var(--text-primary);
     margin-bottom: 8px;
@@ -655,8 +678,6 @@ a {
     opacity: 0.8;
 }
 .portfolio-item .overlay h4 {
-    font-family: var(--font-heading);
-    font-weight: 400;
     font-size: 15px;
     color: var(--text-primary);
     margin-top: 3px;
@@ -787,7 +808,7 @@ a {
     font-size: 9px;
     letter-spacing: 2.5px;
     font-weight: 300;
-    color: rgba(26, 42, 58, 0.45);   /* changed from light to a readable gray */
+    color: rgba(26, 42, 58, 0.45);
 }
 .site-footer span {
     color: var(--celeste-dark);
