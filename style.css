@@ -22,6 +22,12 @@
 }
 
 /* ---------- RESET & BASE ---------- */
+
+.clr{
+    color:#5A8EC4;
+}
+
+
 *,
 *::before,
 *::after {
@@ -96,6 +102,8 @@ body::before {
     background-size: 320px 320px;
 }
 
+
+
 img {
     display: block;
     max-width: 100%;
@@ -159,7 +167,7 @@ a {
     margin-bottom: 16px;
 }
 .section-title em {
-    font-style: italic;
+
     font-weight: 700; /* keep bold + italic */
     color: var(--accent-dark);
 }
