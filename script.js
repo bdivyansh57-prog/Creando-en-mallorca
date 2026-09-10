@@ -209,16 +209,16 @@ es: {
             img.src = client.src;
             img.alt = client.name;
             img.loading = 'lazy';
-            // If image fails, replace with a placeholder SVG (Argentina themed)
+            // If image fails, replace with a placeholder SVG (DARK themed)
             img.onerror = function() {
                 this.outerHTML = `
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
-                        <rect width="120" height="80" fill="#f8fafc" rx="4"/>
-                        <rect x="10" y="20" width="100" height="6" fill="#74ACDF" rx="2" opacity="0.3"/>
-                        <rect x="10" y="34" width="80" height="6" fill="#1A2A3A" rx="2" opacity="0.12"/>
-                        <rect x="10" y="48" width="60" height="6" fill="#1A2A3A" rx="2" opacity="0.08"/>
-                        <circle cx="95" cy="40" r="14" fill="none" stroke="#74ACDF" stroke-width="1.5" opacity="0.25"/>
-                        <circle cx="95" cy="40" r="6" fill="#D4A843" opacity="0.15"/>
+                        <rect width="120" height="80" fill="#2A2C2C" rx="4"/>
+                        <rect x="10" y="20" width="100" height="6" fill="#74ACDF" rx="2" opacity="0.35"/>
+                        <rect x="10" y="34" width="80" height="6" fill="#FFFFFF" rx="2" opacity="0.18"/>
+                        <rect x="10" y="48" width="60" height="6" fill="#FFFFFF" rx="2" opacity="0.10"/>
+                        <circle cx="95" cy="40" r="14" fill="none" stroke="#74ACDF" stroke-width="1.5" opacity="0.35"/>
+                        <circle cx="95" cy="40" r="6" fill="#D4A843" opacity="0.30"/>
                     </svg>
                 `;
             };
@@ -227,5 +227,5 @@ es: {
         });
     }
 
-    console.log('🇦🇷 Argentina Edition — Celeste & White');
+    console.log('🌙 Dark Edition — Celeste & White on #242525');
 })();
