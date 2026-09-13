@@ -34,15 +34,13 @@
     'srv-3-desc': 'Content creation, calendar planning, copywriting, and publishing for Instagram.',
     'srv-4-title': 'Custom Bundles',
     'srv-4-desc': 'Tailored combination of production + social media management based on client needs.',
-    'portfolio-label': 'Portfolio',
-    'portfolio-title': 'Featured Work',
-    'portfolio-sub': 'A selection of our latest visual storytelling projects.',
-    'port-cat-1': 'Food & Gastronomy',
-    'port-cat-2': 'Drone Footage',
-    'port-cat-3': 'Restaurants',
-    'port-cat-4': 'Real Estate',
-    'port-cat-5': 'Home Maintenance',
-    'port-cat-6': 'Commercial Reels',
+    'portfolio-label': 'Our Work',
+    'port-reel': 'REEL',
+    'port-video': 'VIDEO',
+    'port-foto': 'PHOTO',
+    'port-dron': 'DRONE',
+    'port-gestion': 'MANAGEMENT',
+    'work-more': 'See more projects',
     'clients-label': 'Collaborators',
     'clients-title': 'Trusted by',
     'clients-sub': 'Grateful for the clients and collaborators who have worked with us.',
@@ -79,15 +77,13 @@ es: {
     'srv-3-desc': 'Creación de contenido, planificación de calendario, copywriting y publicación para Instagram.',
     'srv-4-title': 'Packs a Medida',
     'srv-4-desc': 'Combinación personalizada de producción + gestión de redes adaptada a las necesidades del cliente.',
-    'portfolio-label': 'Portafolio',
-    'portfolio-title': 'Trabajo Destacado',
-    'portfolio-sub': 'Una selección de nuestros proyectos más recientes de narrativa visual.',
-    'port-cat-1': 'Gastronomía',
-    'port-cat-2': 'Tomas Aéreas',
-    'port-cat-3': 'Restaurantes',
-    'port-cat-4': 'Inmobiliaria',
-    'port-cat-5': 'Mantenimiento',
-    'port-cat-6': 'Reels Comerciales',
+    'portfolio-label': 'Nuestro Trabajo',
+    'port-reel': 'REEL',
+    'port-video': 'VIDEO',
+    'port-foto': 'FOTO',
+    'port-dron': 'DRON',
+    'port-gestion': 'GESTIÓN',
+    'work-more': 'Ver más proyectos',
     'clients-label': 'Colaboradores',
     'clients-title': 'Confían en',
     'clients-sub': 'Agradecemos a los clientes y colaboradores que han trabajado con nosotros.',
@@ -178,6 +174,32 @@ es: {
         }
     });
 
+    // ---- WORK REELS — autoplay muted loop, battery-smart ----
+    // Videos only play while visible on screen; they pause when scrolled
+    // out of view and resume (from where they were) when they return.
+    const reelVideos = document.querySelectorAll('.work-reel video');
+
+    if (reelVideos.length) {
+        reelVideos.forEach(v => { v.muted = true; }); // double-guarantee silent autoplay
+
+        if ('IntersectionObserver' in window) {
+            const reelObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const v = entry.target;
+                    if (entry.isIntersecting) {
+                        v.play().catch(() => {});
+                    } else {
+                        v.pause();
+                    }
+                });
+            }, { threshold: 0.25 });
+            reelVideos.forEach(v => reelObserver.observe(v));
+        } else {
+            // Fallback for very old browsers
+            reelVideos.forEach(v => v.play().catch(() => {}));
+        }
+    }
+
     // ---- CLIENTS MARQUEE — inject logos (with fallback SVGs if images missing) ----
     const clientLogos = [
         { name: 'Logo 1', src: 'img/logos/2.png' },
@@ -227,5 +249,73 @@ es: {
         });
     }
 
-    console.log('🌙 Dark Edition — Celeste & White on #242525');
+    console.log('🌙 Dark Edition — autoplay reels engaged');
 })();
+
+
+/* ============================================================
+   PORTFOLIO MEDIA CARDS
+   Videos autoplay only when visible
+   ============================================================ */
+
+const portfolioVideos = document.querySelectorAll('.media-card video');
+
+if (portfolioVideos.length) {
+
+    portfolioVideos.forEach(video => {
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+    });
+
+    const portfolioVideoObserver = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                const video = entry.target;
+
+                if (entry.isIntersecting) {
+
+                    video.play().catch(() => {});
+
+                } else {
+
+                    video.pause();
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+    portfolioVideos.forEach(video => {
+        portfolioVideoObserver.observe(video);
+    });
+}
+
+
+/* ============================================================
+   PORTFOLIO CARD HOVER
+   Slightly enhances video movement
+   ============================================================ */
+
+document.querySelectorAll('.media-card').forEach(card => {
+
+    const media = card.querySelector('.card-media');
+
+    if (!media) return;
+
+    card.addEventListener('mouseenter', () => {
+
+        if (media.tagName === 'VIDEO') {
+            media.play().catch(() => {});
+        }
+
+    });
+
+});
